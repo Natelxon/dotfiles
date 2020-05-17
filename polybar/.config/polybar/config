@@ -1,0 +1,58 @@
+include-file = /home/natekift/.config/polybar/colors.conf
+include-file = /home/natekift/.config/polybar/top.conf
+include-file = /home/natekift/.config/polybar/bottom.conf
+
+[module/i3]
+type = internal/i3
+
+pin-workspaces = false
+index-sort = true
+enable-click = true
+fuzzy-match = true
+wrapping-scroll = false
+strip-wsnumbers = true
+
+format = <label-state> <label-mode>
+
+label-focused = %icon%
+label-focused-padding = 3
+label-focused-font = 2
+label-focused-foreground = ${colors.foreground}
+label-focused-background = ${colors.background}
+label-focused-underline = ${colors.foreground}
+
+label-unfocused = %icon%
+label-unfocused-padding = 3
+label-unfocused-font = 2
+label-unfocused-foreground = ${colors.foreground}
+label-unfocused-background = ${colors.background}
+label-unfocused-underline = ${colors.foreground}
+
+label-visible = %icon%
+label-visible-padding = 3
+label-visible-font = 2
+label-visible-foreground = ${colors.foreground}
+label-visible-background = ${colors.background}
+label-visible-underline = ${colors.foreground}
+
+label-urgent = %icon%
+label-urgent-padding = 3
+label-urgent-font = 2
+label-urgent-foreground = ${colors.foreground}
+label-urgent-background = ${colors.background}
+label-urgent-underline = ${colors.foreground}
+
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;ﴬ
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;漣
+ws-icon-default = 
+
+
