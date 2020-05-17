@@ -1,0 +1,19 @@
+alias reload='source ~/.bashrc'
+
+# Directory Navigation
+alias down='cd ~/Downloads'
+alias repos='cd ~/Projects'
+
+
+# Quick Config Editing
+alias editdots='subl ~/dotfiles'
+
+
+# Miscellaneous Commands
+alias ls="ls --group-directories-first --time-style=+'%d.%m.%Y %H:%M' --color=auto -hFX"
+alias ll="ls -l --group-directories-first --time-style=+'%d.%m.%Y %H:%M' --color=auto -F"
+alias la="ls -la --group-directories-first --time-style=+'%d.%m.%Y %H:%M' --color=auto -F"
+
+
+# SSH servers
+alias homelab="ssh natekift@npk-debian"
