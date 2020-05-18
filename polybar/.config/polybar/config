@@ -17,9 +17,9 @@ format = <label-state> <label-mode>
 label-focused = %icon%
 label-focused-padding = 3
 label-focused-font = 1
-label-focused-foreground = ${colors.amber}
+label-focused-foreground = ${colors.amber-trans}
 label-focused-background = ${colors.background}
-label-focused-underline = ${colors.amber}
+
 label-focused-alignment = center
 
 label-unfocused = %icon%
@@ -27,7 +27,7 @@ label-unfocused-padding = 3
 label-unfocused-font = 1
 label-unfocused-foreground = ${colors.grey}
 label-unfocused-background = ${colors.background}
-label-unfocused-underline = ${colors.grey}
+
 label-unfocused-alignment = center
 
 label-visible = %icon%
@@ -35,15 +35,15 @@ label-visible-padding = 3
 label-visible-font = 1
 label-visible-foreground = ${colors.grey}
 label-visible-background = ${colors.background}
-label-visible-underline = ${colors.grey}
+
 label-visible-alignment = center
 
 label-urgent = %icon%
 label-urgent-padding = 3
 label-urgent-font = 1
-label-urgent-foreground = ${colors.white}
+label-urgent-foreground = ${colors.amber-trans}
 label-urgent-background = ${colors.background}
-label-urgent-underline = ${colors.white}
+
 label-urgent-alignment = center
 
 
