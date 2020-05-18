@@ -16,7 +16,7 @@ set $ws3    "3:   Firefox "
 set $ws4    "4:   Files "
 set $ws5    "5:   Notes "
 set $ws6    "6:   Chat "
-set $ws7    "7:   General "
+set $ws7    "7:   Music "
 set $ws8    "8:   General "
 set $ws9    "9:   General "
 set $ws10   "10:   Settings "
@@ -183,14 +183,17 @@ assign [class="terminal"]           → $ws1
 assign [class="Sublime"]            → $ws2
 assign [class="Firefox"]            → $ws3
 
-
-# class                 border  backgr. text    indicator child_border
-client.focused          #2b83a6 #2b83a6 #ffffff #dddddd   #2b83a6
-client.focused_inactive #212121 #212121 #86888c #292d2e   #5a5a5a
-client.unfocused        #212121 #212121 #86888c #292d2e   #5a5a5a
-client.urgent           #d64e4e #d64e4e #ffffff #d64e4e   #d64e4e
-client.placeholder      #212121 #0c0c0c #ffffff #212121   #262626
-client.background       #212121
+# assign workspace to monitors
+workspace $ws1 output DP-0
+workspace $ws2 output DP-0
+workspace $ws3 output DP-0
+workspace $ws4 output DP-0
+workspace $ws5 output DP-0
+workspace $ws6 output DP-0
+workspace $ws7 output DP-2
+workspace $ws8 output DP-0
+workspace $ws9 output DP-0
+workspace $ws10 output DP-0
 
 # Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
@@ -200,13 +203,14 @@ exec --no-startup-id picom
 
 # i3-Gaps
 
-gaps inner 8
+gaps inner 24
 gaps outer 0
 
-gaps left 6
-gaps right 6
+gaps left 0
+gaps right 0
 
-gaps top 36
-gaps bottom 36
+gaps top 0
+gaps bottom 0
 
 for_window [class="^.*"] border pixel 0
+
