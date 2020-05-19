@@ -12,4 +12,4 @@ Thumbs.db
 .Trashes
 
 # Gmail Polybar Extension
-/polybar/.config/polybar/gmail
+/polybar/.config/polybar/scripts
