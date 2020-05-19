@@ -1,6 +1,6 @@
-include-file = /home/natekift/.config/polybar/colors.conf
-include-file = /home/natekift/.config/polybar/top.conf
-include-file = /home/natekift/.config/polybar/bottom.conf
+include-file = ~/.config/polybar/colors.conf
+include-file = ~/.config/polybar/top.conf
+include-file = ~/.config/polybar/bottom.conf
 
 [module/i3]
 type = internal/i3
@@ -123,6 +123,12 @@ label-mounted = " %free%"
 label-mounted-font = 2
 label-mounted-foreground = ${colors.grey}
 
+[module/gmail]
+type = custom/script
+exec = ~/.config/polybar/scripts/gmail/launch.py --color "#FD890F" --colortext "#8C8C8C"
+tail = true
+click-left = xdg-open https://mail.google.com
+
 [module/memory]
 type = internal/memory
 interval = 3
@@ -194,6 +200,17 @@ type = custom/text
 content = |
 content-foreground = ${colors.grey}
 content-font = 1
+
+
+[module/spotify]
+type = custom/script
+exec = python  ~/.config/polybar/scripts/spotify/spotify_status.py -font=1 -p ' , ' -f '{play_pause} {song} - {artist} - {album}'
+interval = 1
+
+format = <label>
+format-underline = ${colors.green}
+format-foreground = ${colors.grey}
+format-padding = 2
 
 
 [module/title]
