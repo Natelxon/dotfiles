@@ -1,18 +1,51 @@
-*.foreground: #F8F8F2
-*.background: #282A36
-*.color0:     #000000
-*.color8:     #4D4D4D
-*.color1:     #FF5555
-*.color9:     #FF6E67
-*.color2:     #50FA7B
-*.color10:    #5AF78E
-*.color3:     #F1FA8C
-*.color11:    #F4F99D
-*.color4:     #BD93F9
-*.color12:    #CAA9FA
-*.color5:     #FF79C6
-*.color13:    #FF92D0
-*.color6:     #8BE9FD
-*.color14:    #9AEDFE
-*.color7:     #BFBFBF
-*.color15:    #E6E6E6
+URxvt*buffered: true
+URxvt*depth: 32
+URxvt*termName: rxvt-unicode
+URxvt.urlLauncher: firefox
+URxvt.modifier: mod1
+URxvt*loginShell: true
+URxvt.borderless: true
+URxvt*dynamicColors: on
+URxvt.geometry: 92x24
+URxvt.internalBorder: 20
+URxvt.saveLines: 2048
+URxvt.transparent: false
+URxvt.visualBell: false
+
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+
+! disable ctrl+shift binding
+URxvt.iso14755:             false
+URxvt.iso14755_52:          false
+
+! Disable Perl extension
+! If you do not use the Perl extension features, you can improve the security
+! and speed by disabling Perl extensions completely.
+URxvt.perl-ext:
+URxvt.perl-ext-common:
+
+!! Fonts
+!! regular
+URxvt.font: xft:Hack Nerd Font:size=10:antialias=true
+
+URxvt.allow_bold:           false
+URxvt*boldMode:             true
+
+! Fix font space
+URxvt*letterSpace:          -1
+
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+Urxvt*secondaryScroll: 		true
+
+! Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorUnderline:      false
+
+! Pointer
+URxvt.pointerBlank:         false
+
+Xcursor.theme: DMZ-Black
+Xcursor.size: 24

@@ -70,7 +70,7 @@ format-prefix = "﬙ "
 format-prefix-foreground = ${colors.yellow}
 label-foreground = ${colors.grey}
 label-font = 1
-label = " %percentage%%"
+label = " %percentage:2:2%%"
 
 
 [module/date]
@@ -125,7 +125,7 @@ label-mounted-foreground = ${colors.grey}
 
 [module/gmail]
 type = custom/script
-exec = ~/.config/polybar/scripts/gmail/launch.py --color "#FD890F" --colortext "#8C8C8C"
+exec = ~/.config/polybar/scripts/gmail/launch.py --color "#FD890F" --colortext "#8C8C8C" --nosound
 tail = true
 click-left = xdg-open https://mail.google.com
 
@@ -151,13 +151,13 @@ interval = 1.0
 accumulate-stats = true
 unknown-as-up = true
 
-format-connected = <ramp-signal> <label-connected>
+format-connected = <ramp-signal><label-connected>
 format-disconnected = <label-disconnected>
 format-disconnected-prefix = "⚠ "
 format-disconnected-prefix-font = 3
 format-disconnected-prefix-foreground = ${colors.red}
 
-label-connected = "%downspeed%"
+label-connected = %downspeed:8:8%
 label-connected-font = 1
 label-connected-foreground = ${colors.grey}
 
@@ -227,3 +227,35 @@ label-maxlen = 50
 
 label-empty = Empty
 label-empty-foreground = ${colors.foreground}
+
+[module/uptime]
+type = custom/script
+exec = ~/.config/polybar/scripts/uptime.sh
+format-foreground = ${colors.grey}
+
+[module/temp-cpu]
+type = internal/temperature
+interval = 0.5
+
+; Thermal zone to use
+; To list all the zone types, run 
+; $ for i in /sys/class/thermal/thermal_zone*; do echo "$i: $(<$i/type)"; done
+; Default: 0
+thermal-zone = 0
+
+; Full path of temperature sysfs path
+; Use `sensors` to find preferred temperature source, then run
+; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
+; to find path to desired file
+; Default reverts to thermal zone setting
+hwmon-path = /sys/class/thermal/thermal_zone1/temp
+
+; Base temperature for where to start the ramp (in degrees celsius)
+; Default: 0
+base-temperature = 20
+
+; Threshold temperature to display warning label (in degrees celsius)
+; Default: 80
+warn-temperature = 60
+
+label-foreground = ${colors.grey}
